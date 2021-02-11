@@ -1,0 +1,15 @@
+{
+  "name": "elastic-alias-switcher",
+  "version": "1.0.0",
+  "description": "Switches elastic index aliases for updating to newer versions of data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PODER",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.11.0",
+    "command-line-args": "^5.1.1"
+  }
+}
