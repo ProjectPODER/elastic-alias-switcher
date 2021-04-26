@@ -1,6 +1,6 @@
 {
   "name": "elastic-alias-switcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Switches elastic index aliases for updating to newer versions of data.",
   "main": "index.js",
   "scripts": {

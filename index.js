@@ -35,7 +35,10 @@ const client = new Client(config);
 getAliases(client, args)
 .then( (result) => {
     if(result.statusCode == 200) {
-        // First, delete the old alias...
+        if(result.body.length == 0) { // There is no alias to remove.
+            return { statusCode: 200 }
+        }
+        // If it exists, delete the old alias...
         let current = result.body[0];
         return removeOldAlias(client, current);
     }
@@ -54,7 +57,7 @@ getAliases(client, args)
         return putNewAlias(client, next);
     }
     else {
-        console.error('POST ERROR: Exit with status code ',status.statusCode);
+        console.error('POST ERROR: Exit with status: ',status);
         process.exit(status.statusCode);
     }
 } )
